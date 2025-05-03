@@ -1,0 +1,15 @@
+[general]
+live_config_reload = true 
+import = ["~/.config/alacritty/gruvbox_dark.toml"]
+
+[window]
+opacity = 1.0
+blur = false
+
+[font]
+size = 9
+normal = { family = "FiraCode", style = "Regular" }
+bold = { family = "FiraCode", style = "Bold" }
+
+
+    
