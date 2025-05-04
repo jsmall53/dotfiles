@@ -1,0 +1,39 @@
+@define-color gruv-bg #282828;
+@define-color gruv-fg #ebdbb2;
+@define-color gruv-yellow #fabd2f;
+@define-color gruv-orange #fe8019;
+@define-color gruv-red #fb4934;
+@define-color gruv-green #b8bb26;
+@define-color gruv-blue #83a598;
+@define-color gruv-purple #d3869b;
+@define-color gruv-aqua #8ec07c;
+
+window {
+    background: @gruv-bg;
+    color: @gruv-fg;
+    border: 2px solid @gruv-yellow;
+    border-radius: 4px
+}
+
+#workspaces button {
+    background: transparent;
+    color: @gruv-fg;
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    background: @gruv-yellow;
+    color: @gruv-bg;
+}
+
+#clock, #battery, #pulseaudio, #network {
+    color: @gruv-fg;
+    background: transparent;
+    padding: 0 10px;
+}
+
+#tray {
+    background: @gruv-bg;
+    border-radius: 4px;
+}
+
