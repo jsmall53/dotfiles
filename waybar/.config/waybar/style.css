@@ -27,6 +27,12 @@ window {
     border-top: 2px solid @gruv-fg;
 }
 
+#workspaces button.active {
+    color: @gruv-orange;
+    border-top: 2px solid @gruv-fg;
+    font-weight: bold;
+}
+
 /* TODO: i'm not using pulseaudio, im using the other one, figure it out*/
 #clock, #batter, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
     padding: 0 3px;
