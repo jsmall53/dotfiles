@@ -8,20 +8,72 @@
 @define-color gruv-purple #d3869b;
 @define-color gruv-aqua #8ec07c;
 
-window {
-    background: @gruv-bg;
-    color: @gruv-fg;
-    border: 2px solid @gruv-green;
-    border-radius: 4px
+
+* {
+    font-family: Fira Code Font;
+}
+
+window { 
+     /* background: alpha(@gruv-bg, 0.5); */
+     background: none;
+     color: @gruv-fg;
+     /* border: 2px solid @gruv-fg; */
+     border: none;
+     /* border-radius: 4px; */
+} 
+
+/* window#waybar { */
+/*     background: @gruv-bg; */
+/*     margin: 0px; */
+/*     padding: 0px; */
+/* } */
+
+/* #workspaces button { */
+/*     padding: 0 5px; */
+/*     background: transparent; */
+/*     color: @gruv-fg; */
+/*     border-radius: 0px; */
+/*     border-top: 2px solid transparent; */
+/* } */
+.modules-left {
+    background: alpha(@gruv-bg, 0.6);
+    border: 1px solid @gruv-fg;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-left: 12px;
+}
+
+.modules-center {
+    background: alpha(@gruv-bg, 0.6);
+    border: 1px solid @gruv-fg;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.modules-right {
+    background: alpha(@gruv-bg, 0.6);
+    border: 1px solid @gruv-fg;
+    border-radius: 4px;
+    margin: 4px;
+    margin-right: 12;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
+    border: none;
+    transition-duration: 0.3s;
+    background: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
     color: @gruv-fg;
-    border-radius: 4px;
-    border-top: 2px solid transparent;
+    padding: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
+
+#workspaces button.persistent {
+    color: @gruv-fg;
+}
+
 #workspaces button.focused {
     color: @gruv-fg;
     border-top: 2px solid @gruv-fg;
@@ -29,14 +81,18 @@ window {
 
 #workspaces button.active {
     color: @gruv-orange;
-    border-top: 2px solid @gruv-fg;
+    /* border-top: 2px solid @gruv-orange; */
+    border-radius: 0px;
     font-weight: bold;
 }
 
 /* TODO: i'm not using pulseaudio, im using the other one, figure it out*/
 #clock, #batter, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
+    background: none;
     padding: 0 3px;
     margin: 0 3px;
+    margin-top: 3px;
+    margin-bottom: 0px;
 }
 
 #clock {
@@ -95,4 +151,15 @@ window {
     /* background: @gruv-bg; */
     /* border-radius: 4px; */
 }
+/**/
+/* window { */
+/*     background: rgba(40, 40, 40, 0.76); */
+/*     border-width: 2px; */
+/*     border-style: solid; */
+/*     border-color: @gruv-fg; */
+/*     border-radius: 4px; */
+/*     margin-left: 30px; */
+/*     margin-right: 30px; */
+/*     color: @gruv-fg; */
+/* } */
 
