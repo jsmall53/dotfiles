@@ -11,29 +11,82 @@
 window {
     background: @gruv-bg;
     color: @gruv-fg;
-    border: 2px solid @gruv-yellow;
+    border: 2px solid @gruv-green;
     border-radius: 4px
 }
 
 #workspaces button {
+    padding: 0 5px;
     background: transparent;
     color: @gruv-fg;
     border-radius: 4px;
+    border-top: 2px solid transparent;
 }
-
-#workspaces button.active {
-    background: @gruv-yellow;
-    color: @gruv-bg;
-}
-
-#clock, #battery, #pulseaudio, #network {
+#workspaces button.focused {
     color: @gruv-fg;
-    background: transparent;
-    padding: 0 10px;
+    border-top: 2px solid @gruv-fg;
+}
+
+/* TODO: i'm not using pulseaudio, im using the other one, figure it out*/
+#clock, #batter, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
+    padding: 0 3px;
+    margin: 0 3px;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#battery {
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+}
+
+/* #workspaces button.active { */
+/*     background: @gruv-yellow; */
+/*     color: @gruv-bg; */
+/* } */
+
+/* #clock, #battery, #pulseaudio, #network { */
+/*     color: @gruv-fg; */
+/*     background: transparent; */
+/*     padding: 0 10px; */
+/* } */
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#cpu {
+
+}
+
+#memory {
+
+}
+
+#network {
+
+}
+
+#network.disconnected {
+
+}
+
+#pulseaudio {
+
 }
 
 #tray {
-    background: @gruv-bg;
-    border-radius: 4px;
+    /* background: @gruv-bg; */
+    /* border-radius: 4px; */
 }
 
